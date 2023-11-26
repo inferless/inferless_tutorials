@@ -8,13 +8,13 @@ Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8w
 ## Table of Contents
 
 1. [Experimentation with different libraries](#introduction)
-    - [HuggingFace]
-    - [AutoGPTQ]
-    - [Text Generation Inference]
-    - [vLLM]
+    - HuggingFace
+    - AutoGPTQ
+    - Text Generation Inference
+    - vLLM
 
-1.1 [Our Observations](#prerequisites)
-1.2 [GPU Recommendation](#prerequisites)
+1.1 Our Observations
+1.2 GPU Recommendation
  
 
 ---
