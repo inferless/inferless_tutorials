@@ -7,13 +7,23 @@ Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8w
 
 ## Table of Contents
 
-1. [Experimentation with different libraries](#introduction)
-    - HuggingFace
-    - AutoGPTQ
-    - Text Generation Inference
-    - vLLM
-   - 1.1. Our Observations
-   - 1.2. GPU Recommendation
+1. Experimentation with different libraries
+    - - HuggingFace
+    - - AutoGPTQ
+    - - Text Generation Inference
+    - - vLLM
+   - 1.1 Our Observations
+   - 1.2 GPU Recommendation
+2. Defining Dependencies
+3. Constructing the Github/Gitlab Template
+4. Creating the class for inference
+5. Creating the custom runtime
+6. Deploying the model on Inferless
+   - Import the Model through GitHub
+   - Provide the Model details
+   - GPU Selection
+   - Using the Custom Runtime
+   - Review and Deploy
 
 ---
 ## Prerequisites
