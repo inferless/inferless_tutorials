@@ -13,8 +13,8 @@ Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8w
     - Text Generation Inference
     - vLLM
 
-1.1 Our Observations
-1.2 GPU Recommendation
+1.1. Our Observations
+1.2. GPU Recommendation
  
 
 ---
