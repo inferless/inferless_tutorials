@@ -12,10 +12,8 @@ Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8w
     - AutoGPTQ
     - Text Generation Inference
     - vLLM
-
-1.1. Our Observations
-1.2. GPU Recommendation
- 
+   - [1.1. Our Observations](#11-our-observations)
+   - [1.2. GPU Recommendation](#12-gpu-recommendation) 
 
 ---
 ## Prerequisites
