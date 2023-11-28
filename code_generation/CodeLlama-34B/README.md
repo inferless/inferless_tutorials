@@ -5,25 +5,19 @@ Code Llama is a collection of pretrained and fine-tuned generative text models r
 
 Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) tutorial which will guides you through the process of deploying a CodeLlama-Python-34B GPTQ model using Inferless.
 
-## Table of Contents
+## TL;DR - Deploying CodeLlama-Python-34B with Inferless:
 
-1. Experimentation with different libraries
-    - - HuggingFace
-    - - AutoGPTQ
-    - - Text Generation Inference
-    - - vLLM
-   - 1.1 Our Observations
-   - 1.2 GPU Recommendation
-2. Defining Dependencies
-3. Constructing the Github/Gitlab Template
-4. Creating the class for inference
-5. Creating the custom runtime
-6. Deploying the model on Inferless
-   - Import the Model through GitHub
-   - Provide the Model details
-   - GPU Selection
-   - Using the Custom Runtime
-   - Review and Deploy
+Deployment of GPTQ, 4-bit quantized CodeLlama-Python-34B model.
+Experimented with various inference libraries like HuggingFace Transformer Pipeline, AutoGPTQ, Text Generation Inference,vLLM favoring vLLM for best latency and token rate.
+By using the vLLM with GPTQ 4bit quantized model, you can expect an average lowest latency of 3.51 sec and average token generation rate of 58.40/sec. This setup has an average cold start time of 21.8 sec. 
+Dependencies defined in config.yaml using vLLM.
+GitHub/Gitlab template creation with app.py and config.yaml.
+Model class in app.py with initialize, infer, and finalize functions.
+Custom runtime creation with necessary system and Python packages.
+Model import via GitHub with input/output parameters in JSON.
+Recommended GPU: NVIDIA A100 for optimal performance.
+Custom runtime selection in advanced configuration.
+Final review and deployment on Inferless platform.
 
 ---
 ## Prerequisites
@@ -32,7 +26,7 @@ Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8w
 - **Curl**. You would need Curl if you want to make API calls from the terminal itself.
 
 ---
-## Quick Start
+## Quick Tutorial on "How to Deploy" on Inferless
 Here is a quick start to help you get up and running with this template on Inferless.
 
 ### Download the config-vllm and Create a runtime 
