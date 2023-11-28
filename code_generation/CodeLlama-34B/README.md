@@ -1,10 +1,10 @@
 # Tutorial - Deploying Codellama - 34b with vLLM-GPTQ
 
-Check out [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) tutorial which will guides you through the process of deploying a CodeLlama-Python-34B GPTQ model using Inferless.
+Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guides you through the process of deploying a CodeLlama-Python-34B GPTQ model using Inferless.
 
 ## TL;DR - Deploying CodeLlama-Python-34B with Inferless:
 
-- Deployment of GPTQ, 4-bit quantized CodeLlama-Python-34B model.
+- Deployment of GPTQ, 4-bit quantized CodeLlama-Python-34B model using [vLLM](https://github.com/chu-tianxiang/vllm-gptq).
 - Experimented with various inference libraries like HuggingFace Transformer Pipeline, AutoGPTQ, Text Generation Inference,vLLM favoring vLLM for best latency and token rate.
 - By using the vLLM with GPTQ 4bit quantized model, you can expect an average lowest latency of 3.51 sec and average token generation rate of 58.40/sec. This setup has an average cold start time of 21.8 sec.
 - Dependencies defined in config.yaml using vLLM.
@@ -27,9 +27,9 @@ Check out [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8
 Here is a quick start to help you get up and running with this template on Inferless.
 
 ### Download the config-vllm and Create a runtime 
-Get started by downloading the config.yaml file and go to Inferless dashboard and create a custom runtime 
+Get started by downloading the config.yaml file and go to Inferless dashboard and create a custom runtime.
 
-Quickly add this as a Custom runtime
+Quickly add this as a Custom runtime.
 
 ### Fork the Repository
 Get started by forking the repository. You can do this by clicking on the fork button in the top right corner of the repository page.
@@ -115,14 +115,14 @@ Open the `app.py` file. This contains the main code for inference. It has three 
 
 **Initialize** -  This function is executed during the cold start and is used to initialize the model. If you have any custom configurations or settings that need to be applied during the initialization, make sure to add them in this function.
 
-**Infer** - This function is where the inference happens. The argument to this function `inputs`, is a dictionary containing all the input parameters. The keys are the same as the name given in inputs. Refer to [input](#input) for more.
+**Infer** - This function is where the inference happens. The argument to this function `inputs`, is a dictionary containing all the input parameters. The keys are the same as the name given in the inputs. Refer to [input](#input) for more.
 
 ```python
 def infer(self, inputs):
     prompt = inputs["prompt"]
 ```
 
-**Finalize** - This function is used to perform any cleanup activity for example you can unload the model from the gpu by setting `self.pipe = None`.
+**Finalize** - This function is used to perform any cleanup activity for example you can unload the model from the GPU by setting `self.pipe = None`.
 
 
 For more information refer to the [Inferless docs](https://docs.inferless.com/).
