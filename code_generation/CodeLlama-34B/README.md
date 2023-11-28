@@ -7,17 +7,17 @@ Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8w
 
 ## TL;DR - Deploying CodeLlama-Python-34B with Inferless:
 
-Deployment of GPTQ, 4-bit quantized CodeLlama-Python-34B model.
-Experimented with various inference libraries like HuggingFace Transformer Pipeline, AutoGPTQ, Text Generation Inference,vLLM favoring vLLM for best latency and token rate.
-By using the vLLM with GPTQ 4bit quantized model, you can expect an average lowest latency of 3.51 sec and average token generation rate of 58.40/sec. This setup has an average cold start time of 21.8 sec. 
-Dependencies defined in config.yaml using vLLM.
-GitHub/Gitlab template creation with app.py and config.yaml.
-Model class in app.py with initialize, infer, and finalize functions.
-Custom runtime creation with necessary system and Python packages.
-Model import via GitHub with input/output parameters in JSON.
-Recommended GPU: NVIDIA A100 for optimal performance.
-Custom runtime selection in advanced configuration.
-Final review and deployment on Inferless platform.
+- Deployment of GPTQ, 4-bit quantized CodeLlama-Python-34B model.
+- Experimented with various inference libraries like HuggingFace Transformer Pipeline, AutoGPTQ, Text Generation Inference,vLLM favoring vLLM for best latency and token rate.
+- By using the vLLM with GPTQ 4bit quantized model, you can expect an average lowest latency of 3.51 sec and average token generation rate of 58.40/sec. This setup has an average cold start time of 21.8 sec.
+- Dependencies defined in config.yaml using vLLM.
+- GitHub/Gitlab template creation with app.py and config.yaml.
+- Model class in app.py with initialize, infer, and finalize functions.
+- Custom runtime creation with necessary system and Python packages.
+- Model import via GitHub with input/output parameters in JSON.
+- Recommended GPU: NVIDIA A100 for optimal performance.
+- Custom runtime selection in advanced configuration.
+- Final review and deployment on Inferless platform.
 
 ---
 ## Prerequisites
