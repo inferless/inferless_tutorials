@@ -1,7 +1,4 @@
-# Codellama - 34b with vLLM-GPTQ
-Code Llama is a collection of pretrained and fine-tuned generative text models ranging in scale from 7 billion to 34 billion parameters. This is the repository for the 34B Python specialist version. This model is designed for general code synthesis and understanding.
-
-# Tutorial - Deploying CodeLlama-Python-34B Model with Inferless
+# Tutorial - Deploying Codellama - 34b with vLLM-GPTQ
 
 Click on [this](#https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) tutorial which will guides you through the process of deploying a CodeLlama-Python-34B GPTQ model using Inferless.
 
