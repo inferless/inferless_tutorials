@@ -1,7 +1,7 @@
 ---
 description: >-
   In this tutorial, we'll show the deployment process of a quantized GPTQ model
-  using AutoGPTQ. We are running a GPTQ, 4-bit quantized version of the
+  using vLLM. We are deploying a GPTQ, 4-bit quantized version of the
   codeLlama-Python-34B model.
 ---
 
@@ -20,21 +20,21 @@ We have considered using 4 different inference libraries and tested the CodeLlam
 
 ### Our  Observations
 
-From our experiment, vLLM with GPTQ 4bit quantized model is a good setup for the lowest latency  `3.51 sec` and token generation of `58.40/sec`. This setup has an average cold start time  `30.42 sec` which includes an average loading time of `21.14 sec`.&#x20;
+In our experiment, we found that using the vLLM with GPTQ 4bit quantized model is a good setup. You can expect an average lowest latency of  `3.51 sec` and average token generation rate of `58.40/sec`. This setup has an average cold start time of `21.8 sec`.&#x20;
 
-Note: _To use GPTQ with vLLM we have used the_ [_vLLM-GPTQ_](https://github.com/chu-tianxiang/vllm-gptq)_. To calculate the cold start time we have use only a single input for all the different combinations, cold start time includes initialization time + inference time._
+Note: You can _use the_ [_vLLM-GPTQ_](https://github.com/chu-tianxiang/vllm-gptq) _to deploy the same._&#x20;
 
 ### GPU Recommendation
 
-We recommend the user use NVIDIA A100(80GB) GPU to achieve similar results.
+We recommend the users use NVIDIA A100(80GB) GPU to achieve similar results.
 
 
 
-<table data-full-width="true"><thead><tr><th>Library</th><th align="center">Quantization</th><th width="208">Avg Latency(sec)</th><th>Avg token/sec</th><th>Avg output token count</th><th align="center">Avg Cold Start time</th></tr></thead><tbody><tr><td>HuggingFace Transformer Pipeline</td><td align="center"> -</td><td>17.84</td><td>16.77</td><td>294.8</td><td align="center">-</td></tr><tr><td>HuggingFace Transformer</td><td align="center">nf4 4bit bitsandbytes</td><td>19.12</td><td>15.59</td><td>299.9</td><td align="center">-</td></tr><tr><td>AutoGPTQ</td><td align="center">GPTQ</td><td>9.73</td><td>32.14</td><td>285.4</td><td align="center">32.88(Load:12.11 ,Infer:20.76)</td></tr><tr><td>TGI</td><td align="center">AWQ</td><td>8.56</td><td>37.04</td><td>312.8</td><td align="center">-</td></tr><tr><td>TGI</td><td align="center">GPTQ</td><td>21.26</td><td>14.09</td><td>267.1</td><td align="center">-</td></tr><tr><td>TGI</td><td align="center">bitsandbytes</td><td>39.19</td><td>10.03</td><td>416.6</td><td align="center">-</td></tr><tr><td>vLLM</td><td align="center">-</td><td>14.07</td><td>21.46</td><td>301.5</td><td align="center">45.14(Load:21.14, Infer:23.99)</td></tr><tr><td>vLLM</td><td align="center">GPTQ</td><td>3.51</td><td>58.40</td><td>208.8</td><td align="center">30.42(Load:21.8,Infer:8.6)</td></tr><tr><td>vLLM</td><td align="center">AWQ</td><td>6.61</td><td>34.79</td><td>247.5</td><td align="center">36.84(Load:33.53,Infer:3.31)</td></tr><tr><td>Triton+vLLM(backend)</td><td align="center">-</td><td>15.61</td><td>24.25</td><td>341.9</td><td align="center">44.47(Load:19.86, Infer:24.60)</td></tr><tr><td>Triton+vLLM(backend)</td><td align="center">AWQ</td><td>7.36</td><td>41.43</td><td>276</td><td align="center">51.41(Load:36.55 ,Infer:14.85)</td></tr><tr><td>Triton+vLLM(backend)</td><td align="center">GPTQ</td><td>7.79</td><td>39.68</td><td>298.6</td><td align="center">29.08(Load:20.16, Infer: 8.91)</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th>Library</th><th align="center">Quantization</th><th width="208">Avg Latency(sec)</th><th>Avg token/sec</th><th>Avg output token count</th><th align="center">Avg Cold Start time</th></tr></thead><tbody><tr><td>HuggingFace Transformer Pipeline</td><td align="center"> -</td><td>17.84</td><td>16.77</td><td>294.8</td><td align="center">-</td></tr><tr><td>HuggingFace Transformer</td><td align="center">nf4 4bit bitsandbytes</td><td>19.12</td><td>15.59</td><td>299.9</td><td align="center">-</td></tr><tr><td>AutoGPTQ</td><td align="center">GPTQ</td><td>9.73</td><td>32.14</td><td>285.4</td><td align="center">12.11</td></tr><tr><td>TGI</td><td align="center">AWQ</td><td>8.56</td><td>37.04</td><td>312.8</td><td align="center">-</td></tr><tr><td>TGI</td><td align="center">GPTQ</td><td>21.26</td><td>14.09</td><td>267.1</td><td align="center">-</td></tr><tr><td>TGI</td><td align="center">bitsandbytes</td><td>39.19</td><td>10.03</td><td>416.6</td><td align="center">-</td></tr><tr><td>vLLM</td><td align="center">-</td><td>14.07</td><td>21.46</td><td>301.5</td><td align="center">21.14</td></tr><tr><td>vLLM</td><td align="center">GPTQ</td><td>3.51</td><td>58.40</td><td>208.8</td><td align="center">21.8</td></tr><tr><td>vLLM</td><td align="center">AWQ</td><td>6.61</td><td>34.79</td><td>247.5</td><td align="center">33.53</td></tr><tr><td>Triton+vLLM(backend)</td><td align="center">-</td><td>15.61</td><td>24.25</td><td>341.9</td><td align="center">19.86</td></tr><tr><td>Triton+vLLM(backend)</td><td align="center">AWQ</td><td>7.36</td><td>41.43</td><td>276</td><td align="center">36.55</td></tr><tr><td>Triton+vLLM(backend)</td><td align="center">GPTQ</td><td>7.79</td><td>39.68</td><td>298.6</td><td align="center">20.1</td></tr></tbody></table>
 
 ## Defining Dependencies
 
-This tutorial utlizes `auto_gptq` to load and serve the model. It also uses the [`transformers`](https://github.com/huggingface/transformers) package for loading and using the tokenizer. These dependencies need to be added to the custom runtime .yaml file.
+This tutorial utilizes `vLLM` to load and serve the model. Define this library on the config.yaml file which you need to upload during the deployment.
 
 ## Constructing the Github/Gitlab Template
 
