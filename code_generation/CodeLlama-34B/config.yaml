@@ -1,0 +1,7 @@
+build:
+  cuda_version: "12.1.1"
+  system_packages:
+    - "libssl-dev"
+  python_packages:
+    - "git+https://github.com/chu-tianxiang/vllm-gptq.git"
+    - "accelerate"
