@@ -17,9 +17,9 @@ import base64
 
 
 class InferlessPythonModel:
+    
     def initialize(self):
-        self.pipe = StableVideoDiffusionPipeline.from_pretrained(
-            "stabilityai/stable-video-diffusion-img2vid-xt", torch_dtype=torch.float16, variant="fp16")
+        self.pipe = StableVideoDiffusionPipeline.from_pretrained("stabilityai/stable-video-diffusion-img2vid-xt", torch_dtype=torch.float16, variant="fp16")
         self.pipe.to("cuda")
         self.pipe.unet = torch.compile(self.pipe.unet, mode="reduce-overhead", fullgraph=True)
         self.pipe.vae = torch.compile(self.pipe.vae, mode="reduce-overhead", fullgraph=True)
@@ -33,7 +33,7 @@ class InferlessPythonModel:
         self.device = "cuda",
         self.output_folder = "outputs",
 
-    def sample(self,inputs):
+    def infer(self,inputs):
         image_url = inputs['image_url']
         max_64_bit_int = 2**63 - 1
         image = self.resize_image(image_url)
@@ -61,8 +61,6 @@ class InferlessPythonModel:
             base64_string = base64_encoded_data.decode("utf-8")
 
         return {"generated_video": base64_string}
-
-
 
     def resize_image(self,image_url, output_size=(1024, 576)):
         # Calculate aspect ratio
@@ -99,3 +97,6 @@ class InferlessPythonModel:
         # Crop the image
         cropped_image = resized_image.crop((left, top, right, bottom))
         return cropped_image
+
+    def finalize(self,*args):
+        pass
