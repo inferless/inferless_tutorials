@@ -25,7 +25,7 @@ Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9s
 ## Quick Tutorial on "How to Deploy" on Inferless
 Here is a quick start to help you get up and running with this template on Inferless.
 
-### Download the config-vllm and Create a runtime 
+### Download the config and Create a runtime 
 Get started by downloading the config.yaml file and go to Inferless dashboard and create a custom runtime.
 
 Quickly add this as a Custom runtime.
