@@ -5,7 +5,7 @@ Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9s
 ## TL;DR - Deploy Stable Video Diffusion using Inferless:
 
 - Deployment of stable-video-diffusion-img2vid-xt model using [diffusers](https://github.com/huggingface/diffusers).
-- By using the vLLM with GPTQ 4bit quantized model, you can expect an average lowest latency of 3.51 sec and average token generation rate of 58.40/sec. This setup has an average cold start time of 21.8 sec.
+- By using the diffusers, you can expect an average lowest latency of 39 sec which generates 4sec video of 6fps. This setup has an average cold start time of 7 sec.
 - Dependencies defined in config.yaml.
 - GitHub/GitLab template creation with app.py and config.yaml.
 - Model class in app.py with initialize, infer, and finalize functions.
