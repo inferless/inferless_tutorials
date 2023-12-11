@@ -91,20 +91,19 @@ curl --location '<your_inference_url>' \
           --header 'Content-Type: application/json' \
           --header 'Authorization: Bearer <your_api_key>' \
           --data '{
-                  "inputs": [
-                    {
-                      "data": [
-                        "def factorial(int n):"
-                      ],
-                      "name": "prompt",
-                      "shape": [
-                        1
-                      ],
-                      "datatype": "BYTES"
-                    }
-                  ]
+            "inputs": [
+              {
+                "data": [
+                  "https://images.cnbctv18.com/wp-content/uploads/2022/08/ashneer-grover-3-Meme-1-1019x573.jpg"
+                        ],
+                "name": "image_url",
+                "shape": [
+                              1
+                        ],
+                "datatype": "BYTES"
                 }
-            '
+            ]
+            }'
 ```
 
 
