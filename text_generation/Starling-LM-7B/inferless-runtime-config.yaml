@@ -3,6 +3,6 @@ build:
   system_packages:
     - "libssl-dev"
   python_packages:
-    - "auto-gptq"
-    - "transformers"
-    - "accelerate"
+    - "auto-gptq==0.5.1"
+    - "transformers==4.35.2"
+    - "accelerate==0.25.0"
