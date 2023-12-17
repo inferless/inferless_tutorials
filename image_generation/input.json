@@ -1,0 +1,14 @@
+{
+    "inputs": [
+      {
+        "data": [
+          "Penguins having dinner"
+        ],
+        "name": "prompt",
+        "shape": [
+          1
+        ],
+        "datatype": "BYTES"
+      }
+    ]
+  }

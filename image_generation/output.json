@@ -1,0 +1,14 @@
+{
+    "outputs": [
+      {
+        "data": [
+          "Blank"
+        ],
+        "name": "generated_image_base64",
+        "shape": [
+          1
+        ],
+        "datatype": "BYTES"
+      }
+    ]
+  }
