@@ -1,9 +1,9 @@
-# Tutorial - Deploy OpenHermes-2.5-Mistral-7B-GPTQ using Inferless
+# Tutorial - Deploy OpenHermes-2.5-Mistral-7B-AWQ using Inferless
 
-Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guide you through the process of deploying a Starling-LM-7B-alpha-GPTQ model using Inferless.
+Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guide you through the process of deploying a Starling-LM-7B-alpha-AWQ model using Inferless.
 
-## TL;DR - Deploy OpenHermes-2.5-Mistral-7B-GPTQ using Inferless:
-- Deployment of Deploy OpenHermes-2.5-Mistral-7B-GPTQ model using [vLLM](https://github.com/vllm-project/vllm).
+## TL;DR - Deploy OpenHermes-2.5-Mistral-7B-AWQ using Inferless:
+- Deployment of Deploy OpenHermes-2.5-Mistral-7B-AWQ model using [vLLM](https://github.com/vllm-project/vllm).
 - By using the vLLM, you can expect an average latency of 3.52sec, generating an average of 98.16 tokens/sec and an average cold start time of 19.47sec using an A100 GPU(80GB).
 - Dependencies defined in config.yaml.
 - GitHub/GitLab template creation with app.py and config.yaml.
