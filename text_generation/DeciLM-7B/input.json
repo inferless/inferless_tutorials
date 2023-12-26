@@ -1,0 +1,14 @@
+{
+    "inputs": [
+      {
+        "data": [
+          "What is an AI?"
+        ],
+        "name": "prompt",
+        "shape": [
+          1
+        ],
+        "datatype": "BYTES"
+      }
+    ]
+}
