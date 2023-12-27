@@ -1,10 +1,11 @@
 # Tutorial - Deploy DeciLM-7B using Inferless
 
-Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guide you through the process of deploying a DeciLM-7B model using Inferless.
+Check out [this tutorial](https://tutorials.inferless.com/~/changes/BjDKNpYSU2dIwBTKfNxC?r=Sx8PZOdd24ZQAP3ZnHxv) which will guide you through the process of deploying a DeciLM-7B model using Inferless.
 
 ## TL;DR - Deploy DeciLM-7B using Inferless:
 - Deployment of Deploy DeciLM-7B model using [bitsandbytes](https://github.com/TimDettmers/bitsandbytes).
-- By using the AutoGPTQ, you can expect an average latency of 5.04 sec, generating an average of 41.99 tokens/sec and an average cold start time of 9.76sec using an A100 GPU(80GB).
+
+- By using the bitsandbytes, you can expect an average latency of 9.25 sec, generating an average of 23.18 tokens/sec where each token took 43.12 ms and an average cold start time of 9.85sec using an A100 GPU(80GB).
 - Dependencies defined in config.yaml.
 - GitHub/GitLab template creation with app.py and config.yaml.
 - Model class in app.py with initialize, infer, and finalize functions.
@@ -52,7 +53,7 @@ The following is a sample Input and Output JSON for this model which you can use
     "inputs": [
       {
         "data": [
-          "What is Quantum Computing?"
+          "What is an AI?"
         ],
         "name": "prompt",
         "shape": [
@@ -93,7 +94,7 @@ curl --location '<your_inference_url>' \
     "inputs": [
       {
         "data": [
-          "What is Quantum Computing?"
+          "What is an AI?"
         ],
         "name": "prompt",
         "shape": [
