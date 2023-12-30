@@ -1,6 +1,6 @@
 # Tutorial - Deploy SOLAR-10.7B-Instruct using Inferless
 
-Check out [this tutorial](https://tutorials.inferless.com/~/changes/BjDKNpYSU2dIwBTKfNxC?r=Sx8PZOdd24ZQAP3ZnHxv) which will guide you through the process of deploying a SOLAR-10.7B-Instruct model using Inferless.
+Check out [this tutorial](https://tutorials.inferless.com/~/changes/BjDKNpYSU2dIwBTKfNxC/quantize-and-deploy-solar-10.7b-instruct-using-inferless) which will guide you through the process of deploying a SOLAR-10.7B-Instruct model using Inferless.
 
 ## TL;DR - Deploy SOLAR-10.7B-Instruct using Inferless:
 - Deployment of Deploy SOLAR-10.7B-Instruct model using [vLLM](https://github.com/vllm-project/vllm).
