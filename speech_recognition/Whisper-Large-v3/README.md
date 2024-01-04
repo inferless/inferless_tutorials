@@ -1,6 +1,6 @@
 # Tutorial - Deploy Whisper-large-v3 using Inferless
 
-Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guide you through the process of deploying a Whisper-large-v3 model using Inferless.
+Check out [this tutorial](https://tutorials.inferless.com/deploy-whisper-large-v3-using-inferless) which will guide you through the process of deploying a Whisper-large-v3 model using Inferless.
 
 ## TL;DR - Deploy Whisper-large-v3 using Inferless:
 - Deployment of Deploy Whisper-large-v3 model using [Transformers](https://github.com/huggingface/transformers.git).

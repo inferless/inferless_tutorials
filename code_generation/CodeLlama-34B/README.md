@@ -1,6 +1,6 @@
 # Tutorial - Deploying Codellama - 34b with vLLM-GPTQ
 
-Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guides you through the process of deploying a CodeLlama-Python-34B GPTQ model using Inferless.
+Check out [this tutorial](https://tutorials.inferless.com/) which will guides you through the process of deploying a CodeLlama-Python-34B GPTQ model using Inferless.
 
 ## TL;DR - Deploying CodeLlama-Python-34B with Inferless:
 

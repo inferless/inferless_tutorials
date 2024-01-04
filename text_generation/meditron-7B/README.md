@@ -1,6 +1,6 @@
 # Tutorial - Deploy Meditron-7B-AWQ using Inferless
 
-Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guide you through the process of deploying a Starling-LM-7B-alpha-GPTQ model using Inferless.
+Check out [this tutorial](https://tutorials.inferless.com/deploy-meditron-using-inferless) which will guide you through the process of deploying a Starling-LM-7B-alpha-GPTQ model using Inferless.
 
 ## TL;DR - Deploy Meditron-7B-AWQ using Inferless:
 - Deployment of Deploy Meditron-7B-AWQ model using [vLLM](https://github.com/vllm-project/vllm).
