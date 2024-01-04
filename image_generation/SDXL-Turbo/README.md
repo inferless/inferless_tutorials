@@ -1,6 +1,6 @@
 # Tutorial - Deploy Stable Diffusion XL Turbo using Inferless
 
-Check out [this tutorial](https://app.gitbook.com/o/n3Et76kSUOGbJXGsk4wi/s/TQT9sHvr0xDP8wI4nT8O/) which will guide you through the process of deploying a Stable Diffusion XL Turbo model using Inferless.
+Check out [this tutorial](https://tutorials.inferless.com/deploy-stable-diffusion-xl-turbo-using-inferless) which will guide you through the process of deploying a Stable Diffusion XL Turbo model using Inferless.
 
 ## TL;DR - Deploy Stable Diffusion XL Turbo using Inferless:
 - Deployment of Deploy Stable Diffusion XL Turbo model using [Diffusers](https://github.com/huggingface/diffusers.git).
