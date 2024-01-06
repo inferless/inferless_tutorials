@@ -3,11 +3,10 @@
 Check out [this tutorial](https://tutorials.inferless.com/~/changes/BjDKNpYSU2dIwBTKfNxC?r=Sx8PZOdd24ZQAP3ZnHxv) which will guide you through the process of deploying a TenyxChat-7B model using Inferless.
 
 ## TL;DR - Deploy TenyxChat-7B using Inferless:
-- Deployment of Deploy TenyxChat-7B model using [bitsandbytes](https://github.com/TimDettmers/bitsandbytes).
-
-- By using the bitsandbytes, you can expect an average latency of 11.2 sec, generating an average of 22.84 tokens/sec where each token took 43.78 ms and an average cold start time of 9.22 sec using an A100 GPU(80GB).
-- Dependencies defined in config.yaml.
-- GitHub/GitLab template creation with app.py and config.yaml.
+- Deployment of Deploy TenyxChat-7B model using [huggingface pipeline](https://github.com/huggingface/transformers).
+- By using the huggingface pipeline, you can expect an average latency of 3.63 sec, generating an average of 39.29 tokens/sec where each token took 25.44 ms and an average cold start time of 9.45 sec using an A100 GPU(80GB).
+- Dependencies defined in inferless-runtime-config.yaml.
+- GitHub/GitLab template creation with app.py and inferless-runtime-config.yaml.
 - Model class in app.py with initialize, infer, and finalize functions.
 - Custom runtime creation with necessary system and Python packages.
 - Model import via GitHub with input/output parameters in JSON.
