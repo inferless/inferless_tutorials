@@ -1,6 +1,6 @@
 version: 1.0.0
 
-name: DeciLM-7B
+name: SOLAR-10.7B-Instruct
 import_source: GIT
 
 # you can choose the options between ONNX, TENSORFLOW, PYTORCH
