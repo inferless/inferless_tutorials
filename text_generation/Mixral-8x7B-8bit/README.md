@@ -1,11 +1,11 @@
-# Tutorial - Deploy SOLAR-10.7B-Instruct using Inferless
+# Tutorial - Deploy Mixtral-8x7B using Inferless
 
-Check out [this tutorial](https://tutorials.inferless.com/~/changes/BjDKNpYSU2dIwBTKfNxC/quantize-and-deploy-solar-10.7b-instruct-using-inferless) which will guide you through the process of deploying a SOLAR-10.7B-Instruct model using Inferless.
+Check out [this tutorial](https://tutorials.inferless.com/~/changes/BjDKNpYSU2dIwBTKfNxC/quantize-and-deploy-solar-10.7b-instruct-using-inferless) which will guide you through the process of deploying a Mixtral-8x7B model using Inferless.
 
-## TL;DR - Deploy SOLAR-10.7B-Instruct using Inferless:
-- Deployment of Deploy SOLAR-10.7B-Instruct model using [vLLM](https://github.com/vllm-project/vllm).
+## TL;DR - Deploy Mixtral-8x7B using Inferless:
+- Deployment of Deploy 8 bit quantized Mixtral-8x7B model using [PyTorch](https://github.com/pytorch-labs/gpt-fast).
 
-- By using the vLLM, you can expect an average latency of 1.37 sec, generating an average of 111.54 tokens/sec where each token took 8.97 ms and an average cold start time of 11.69sec using an A100 GPU(80GB).
+- By using the PyTorch, you can expect an average latency of 4.94 sec for a max-token of 256, generating an average of 52.03 tokens/sec where each token took 19.22 ms and an average cold start time of 11.48sec using an A100 GPU(80GB).
 - Dependencies defined in config.yaml.
 - GitHub/GitLab template creation with app.py and config.yaml.
 - Model class in app.py with initialize, infer, and finalize functions.
