@@ -1,0 +1,14 @@
+{
+    "inputs": [
+      {
+        "data": [
+          "def factorial(int n):"
+        ],
+        "name": "prompt",
+        "shape": [
+          1
+        ],
+        "datatype": "BYTES"
+      }
+    ]
+}
