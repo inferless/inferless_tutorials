@@ -1,14 +1,8 @@
-{
-    "inputs": [
-      {
-        "data": [
-          "What is Quantum Computing?"
-        ],
-        "name": "prompt",
-        "shape": [
-          1
-        ],
-        "datatype": "BYTES"
-      }
-    ]
-}
+
+INPUT_SCHEMA = {
+    "prompt": {
+        'datatype': 'STRING',
+        'required': True,
+        'shape': [1],
+        'example': ["What is Quantum Computing?"]
+    }
