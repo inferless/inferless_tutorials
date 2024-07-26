@@ -5,3 +5,4 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': ["Penguins having dinner"]
     }
+}
