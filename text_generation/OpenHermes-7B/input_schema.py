@@ -6,3 +6,4 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': ["What is Quantum Computing?"]
     }
+}
